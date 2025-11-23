@@ -9,11 +9,11 @@ ALGORITHME: Code_Pin
              PIN : entier 
              pi    : 3235 
  DEBUT 
-        contour <= 0 
+        contour  ← 0 
         Repeter 
                 écrire ("Donnez le code PIN ") 
                  lire ("Pin")
-         contour <= c+1 
+         contour ← c+1 
         Si ( PIN= pi ) alors 
                  écrire ("le code est vérifiée avec succès") 
         Sinon 
@@ -35,9 +35,9 @@ VAR    x,y,z : entier
 DEBUT 
          écrire ("donnez deux variables ") 
           lire("x,y") 
-          z <= y
-          y <= x 
-          x <= z 
+          z ← y
+          y ← x 
+          x ← z 
           écrire ("y"="y" ,"x"="x")
   FIN
 ```
@@ -51,9 +51,9 @@ DEBUT
          écrire ("donnez deux nombres ")
          lire (a,b )
         Tant que b≠0 faire 
-          r <= a mod b
-          a <= b 
-          b <= r 
+          r ← a mod b
+          a ← b 
+          b ← r 
      Fin tanque 
         écrire ("le PGCD est : "a" " ) 
 FIN
@@ -150,7 +150,7 @@ DÉBUT
             FIN SI 
       FIN TANT que
 
-        SI (x <> n) alors
+        SI (x ≠ n) alors
          ecrire("vous avez perdu. le nombre correct était : ", n)
         FIN SI 
 
@@ -225,3 +225,4 @@ DEBUT
     ecrire("la somme des entiers de 1 a ", n, " est : ", resultat)
 FIN 
 ```
+
