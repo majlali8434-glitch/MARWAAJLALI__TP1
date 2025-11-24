@@ -9,11 +9,11 @@ ALGORITHME: Code_Pin
              PIN : entier 
              pi    : 3235 
  DEBUT 
-        contour  ← 0 
+        contour  <-- 0 
         Repeter 
                 écrire ("Donnez le code PIN ") 
                  lire ("Pin")
-         contour ← c+1 
+         contour <-- c+1 
         Si ( PIN= pi ) alors 
                  écrire ("le code est vérifiée avec succès") 
         Sinon 
@@ -35,9 +35,9 @@ VAR    x,y,z : entier
 DEBUT 
          écrire ("donnez deux variables ") 
           lire("x,y") 
-          z ← y
-          y ← x 
-          x ← z 
+          z <-- y
+          y <-- x 
+          x <-- z 
           écrire ("y"="y" ,"x"="x")
   FIN
 ```
@@ -50,10 +50,10 @@ ALGORITHME : PGCD
 DEBUT 
          écrire ("donnez deux nombres ")
          lire (a,b )
-        Tant que b≠0 faire 
-          r ← a mod b
-          a ← b 
-          b ← r 
+        Tant que b0 faire 
+          r <-- a mod b
+          a <-- b 
+          b <-- r 
      Fin tanque 
         écrire ("le PGCD est : "a" " ) 
 FIN
@@ -78,7 +78,7 @@ DEBUT
     lire(a)
     ecrire("Donner b : ")
     lire(b)
-    resultat ← pgcd(a, b)
+    resultat <-- pgcd(a, b)
     ecrire("PGCD = ", resultat)
 Fin
  la complexité est : O(log(min(a, b)))
@@ -122,25 +122,24 @@ Fin
 ### EXERCICE 5: 
 ```
 ALGORITHME deviner_nombre
-VAR n, x, essais : entier
+VAR n, x, tentative : entier
     rejouer : chaine
 
 DÉBUT 
-    rejouer ← "oui"
+    rejouer <-- "oui"
 
     tant que (rejouer = "oui") faire
 
         n ← aleatoire(1, 100)
-        essais ← 0
+        tentative <-- 0
 
         tant que (essais < 5) faire
          ecrire("devinez un nombre entre 1 et 100 : ")
             lire(x)
-            essais ← essais + 1
+            essais <-- essais + 1
 
             SI (x = n) alors
          ecrire("félicitations ! vous avez trouvé le nombre.")
-                sortir
             SINON
                 si (x > n) alors
                     ecrire("trop grand")
@@ -149,8 +148,7 @@ DÉBUT
                 FIN SI 
             FIN SI 
       FIN TANT que
-
-        SI (x ≠ n) alors
+                Si (x ≠ n) alors
          ecrire("vous avez perdu. le nombre correct était : ", n)
         FIN SI 
 
@@ -169,11 +167,11 @@ Var n : entier
 Procedure afficher_floyd(lignes : entier)
 Var i, j, k : entier
 DEBUT
-    k ← 1
-    Pour i ← 1 JusquA lignes Faire
-        Pour j ← 1 JusquA i Faire
+    k <-- 1
+    Pour i <-- 1 JusquA lignes Faire
+        Pour j <-- 1 JusquA i Faire
             ecrire(k, " ")
-            k ← k + 1
+            k <-- k + 1
         FinPour
         ecrire("")   // retour à la ligne
     FinPour
@@ -182,10 +180,10 @@ FIN
 DEBUT
     ecrire("donner le nombre de lignes : ")
     lire(n)
-    afficher_floyd(n)
+    écrire _floyd(n)
 FIN
   La complexité de l’algorithme est :  O(n²)
-car on affiche 1 + 2 + ... + n = n(n+1)/2 nombres.
+car on écrit 1 + 2 + ... + n = n(n+1)/2 nombres.
 ```
 ### EXERCICE 7 : 
 ## Q1 :
@@ -193,12 +191,12 @@ car on affiche 1 + 2 + ... + n = n(n+1)/2 nombres.
 ALGORITHME somme_entiers
 Var n, i, somme : entier
 DEBUT
-    somme ← 0
+    somme <-- 0
     ecrire("donner un nombre n : ")
     lire(n)
     
-    Pour i ← 1 JusquA n Faire
-        somme ← somme + i
+    Pour i <-- 1 JusquA n Faire
+        somme <-- somme + i
     FinPour
 
     ecrire("la somme des entiers de 1 a ", n, " est : ", somme)
@@ -221,8 +219,9 @@ FIN
 DEBUT
     ecrire("donner un nombre n : ")
     lire(n)
-    resultat ← somme(n)
+    resultat <-- somme(n)
     ecrire("la somme des entiers de 1 a ", n, " est : ", resultat)
 FIN 
 ```
+
 
