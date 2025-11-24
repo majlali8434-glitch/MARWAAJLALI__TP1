@@ -20,7 +20,7 @@ ALGORITHME: Code_Pin
         Si (PIN≠pi ) alors 
                  écrire ("erreur") 
          Sinon 
-        Si (PIN≠pi ou c=3) alors
+        Si (PIN!=pi ou c=3) alors
                   écrire ("blocage")
         Finsi 
     Finsi 
@@ -50,7 +50,7 @@ ALGORITHME : PGCD
 DEBUT 
          écrire ("donnez deux nombres ")
          lire (a,b )
-        Tant que b0 faire 
+        Tant que b!= faire 
           r <-- a mod b
           a <-- b 
           b <-- r 
@@ -111,7 +111,7 @@ Début
     Pour d allant de 1 à racineCarree(n) faire
         Si n mod d = 0 alors
             Rettourne d
-            Si d ≠ n / d alors
+            Si d != n / d alors
                 Rettourne  n / d
             Fin Si
         Fin Si
@@ -130,16 +130,16 @@ DÉBUT
 
     tant que (rejouer = "oui") faire
 
-        n ← aleatoire(1, 100)
+        n <-- aleatoire(1, 100)
         tentative <-- 0
 
-        tant que (essais < 5) faire
+        tant que (tentative < 5) faire
          ecrire("devinez un nombre entre 1 et 100 : ")
             lire(x)
-            essais <-- essais + 1
+            tentative <-- tentative + 1
 
             SI (x = n) alors
-         ecrire("félicitations ! vous avez trouvé le nombre.")
+            ecrire("félicitations ! vous avez trouvé le nombre.")
             SINON
                 si (x > n) alors
                     ecrire("trop grand")
@@ -148,7 +148,7 @@ DÉBUT
                 FIN SI 
             FIN SI 
       FIN TANT que
-                Si (x ≠ n) alors
+                Si (x != n) alors
          ecrire("vous avez perdu. le nombre correct était : ", n)
         FIN SI 
 
@@ -223,5 +223,6 @@ DEBUT
     ecrire("la somme des entiers de 1 a ", n, " est : ", resultat)
 FIN 
 ```
+
 
 
